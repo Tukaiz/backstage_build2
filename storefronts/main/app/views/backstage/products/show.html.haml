@@ -1,0 +1,17 @@
+- content_for :body_content_title do
+  = @product.title
+
+- content_for :body do
+  %section
+    %h1= t('.title')
+    %p= @product.title
+  %section
+    %h1= t('.description')
+    %p= @product.description
+
+- content_for :side_body do
+  %aside
+    %h2= t('.other')
+    %ul#products
+      - @products.each do |product|
+        %li= link_to product.title, backstage.product_path(product)

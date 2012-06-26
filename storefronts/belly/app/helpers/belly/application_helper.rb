@@ -1,0 +1,2 @@
+module Belly::ApplicationHelper
+end

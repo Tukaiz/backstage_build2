@@ -1,0 +1,10 @@
+en:
+  backstage:
+    products:
+      show:
+        other: Other Products
+  activerecord:
+    attributes:
+      'backstage/product':
+        title: Title
+        description: Description

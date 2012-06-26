@@ -1,0 +1,18 @@
+defaults: &defaults
+  adapter: sqlite3
+  database: backstage_<%= Rails.env %>
+
+test:
+  <<: *defaults
+
+development:
+  <<: *defaults
+
+wip:
+  <<: *defaults
+
+staging:
+  <<: *defaults
+
+production:
+  <<: *defaults
