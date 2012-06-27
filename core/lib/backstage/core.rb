@@ -1,6 +1,7 @@
 module Backstage
   autoload :ApplicationController, 'backstage/application_controller'
   autoload :Engine, 'backstage/engine'
+  autoload :StorefrontRouting, 'backstage/storefront_routing'
 
   class << self
     @@storefronts = []
@@ -20,14 +21,6 @@ module Backstage
     # Returns true if a storefront is currently registered with Backstage
     def storefront_registered?(storefront)
       @@storefronts.include?(storefront)
-    end
-
-    def register_routes(storefront, &block)
-      Backstage::Core::Engine.routes.prepend do
-        constraints(StorefrontRouting.new(storefront)) do
-          yield
-        end
-      end
     end
   end
 

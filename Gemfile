@@ -4,8 +4,9 @@ gem 'rails', '~> 3.2'
 
 gem 'rake'
 gem 'haml-rails'
+gem 'sqlite3'
 
-gem 'backstage-core', path: File.expand_path('../core', __FILE__), require: 'backstage/core'
+gem 'backstage-core', path: 'core', require: false
 
 group :assets do
   gem 'sass-rails',   '~> 3.2'
@@ -18,7 +19,6 @@ gem 'jquery-rails'
 gem 'pry-rails'
 
 gem 'responders'
-
 
 group :development do
   gem 'pry-doc'

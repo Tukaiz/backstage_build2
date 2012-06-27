@@ -12,6 +12,12 @@ module Backstage
         app.config.encoding = 'utf-8'
       end
 
+      def register_routes(storefront, &block)
+        routes.prepend do
+          constraints(StorefrontRouting.new(storefront), &block.bind(self))
+        end
+      end
+
       # def self.include_backstage_core!
       #   ::ApplicationController.send(:include, Backstage::ApplicationController)
       #   ::ApplicationController.send(:helper,  Backstage::Core::Engine.helpers)

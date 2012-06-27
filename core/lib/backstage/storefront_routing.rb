@@ -1,10 +1,11 @@
-class StorefrontRouting
+class Backstage::StorefrontRouting
 
   def initialize(storefront)
     @storefront = storefront
   end
 
   def matches?(request)
-    request.path_parameters.starts_with?("/#{@storefront.to_s}")
+    # binding.pry
+    request.params[:storefront] == @storefront.to_s
   end
 end

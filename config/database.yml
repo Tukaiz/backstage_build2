@@ -1,6 +1,6 @@
 defaults: &defaults
   adapter: sqlite3
-  database: backstage_<%= Rails.env %>
+  database: db/backstage_<%= Rails.env %>.sqlite3
 
 test:
   <<: *defaults
