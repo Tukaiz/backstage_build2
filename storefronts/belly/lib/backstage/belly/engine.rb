@@ -6,7 +6,7 @@ module Backstage
       engine_name :backstage_belly
 
       config.after_initialize do
-        Backstage.register_storefront(:belly)
+        Backstage.register_storefront(self.class)
       end
     end
   end

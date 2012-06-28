@@ -10,8 +10,6 @@ Bundler.require(*Rails.groups(assets: %w(development test)))
 
 module Backstage
   class Application < Rails::Application
-    require 'backstage-core'
-
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/lib)
 

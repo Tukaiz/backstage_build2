@@ -6,7 +6,7 @@ gem 'rake'
 gem 'haml-rails'
 gem 'sqlite3'
 
-gem 'backstage-core', path: 'core', require: false
+gem 'backstage-core', path: 'core'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2'

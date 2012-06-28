@@ -1,7 +1,7 @@
 module Backstage
+  autoload :Engine,                'backstage/engine'
+  autoload :StorefrontRouter,      'backstage/storefront_router'
   autoload :ApplicationController, 'backstage/application_controller'
-  autoload :Engine, 'backstage/engine'
-  autoload :StorefrontRouting, 'backstage/storefront_routing'
 
   class << self
     @@storefronts = []
@@ -31,7 +31,7 @@ module Backstage
 
     # Returns a Pathname to the root of the Backstage core
     def self.root
-      @root ||= Pathname(File.expand_path('../../../', __FILE__))
+      @root ||= Pathname(APP_CORE.join('core'))
     end
   end
 end

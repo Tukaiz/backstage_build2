@@ -1,4 +1,4 @@
 Backstage::Core::Engine.register_routes(:belly) do
-  root to: 'belly/cool#index'
-  match '/home' => 'belly/home#index'
+  root to: 'cool#index'
+  match '/home' => 'home#index'
 end
