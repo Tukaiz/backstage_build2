@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  respond_to :html
 
   before_filter :find_all_products
 
@@ -14,6 +15,6 @@ class ProductsController < ApplicationController
 
   protected
   def find_all_products
-    @products = Product.order('position ASC')
+    @products = Product.order('title DESC')
   end
 end

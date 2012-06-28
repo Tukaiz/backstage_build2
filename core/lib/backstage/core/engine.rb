@@ -17,6 +17,8 @@ module Backstage
         ::ApplicationController.send(:helper,  Backstage::Core::Engine.helpers)
       end
 
+      config.autoload_paths += %W(#{config.root}/lib)
+
       config.to_prepare &method(:include_backstage_core!).to_proc
 
       config.after_initialize { |app| app.reload_routes! }
