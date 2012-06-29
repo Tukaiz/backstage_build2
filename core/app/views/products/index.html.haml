@@ -1,4 +1,4 @@
 - content_for :body do
   %ul#products
     - @products.each do |product|
-      %li= link_to product.title, backstage.products_product_path(product)
+      %li= link_to product.title, backstage.product_path(product)

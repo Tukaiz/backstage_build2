@@ -12,7 +12,7 @@
   %body{class: page_class}
     .container-fluid
       #content.row-fluid
-        %h1= Backstage::Core.site_name
+        %h1 Backstage
         %h2= yield(:body_content_title)
         = yield(:body)
         = yield(:side_body)

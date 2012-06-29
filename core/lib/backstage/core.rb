@@ -1,5 +1,4 @@
 module Backstage
-  autoload :Engine,                'backstage/engine'
   autoload :StorefrontRouter,      'backstage/storefront_router'
   autoload :ApplicationController, 'backstage/application_controller'
 
@@ -26,12 +25,10 @@ module Backstage
 
   module Core
     require 'backstage/core/engine'
-    require 'backstage/core/configuration'
-
 
     # Returns a Pathname to the root of the Backstage core
     def self.root
-      @root ||= Pathname(APP_CORE.join('core'))
+      APP_CORE.join('core')
     end
   end
 end

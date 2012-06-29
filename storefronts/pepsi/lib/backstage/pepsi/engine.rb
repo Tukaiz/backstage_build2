@@ -1,9 +1,9 @@
 module Backstage
-  module Belly
+  module Pepsi
     class Engine < Rails::Engine
-      isolate_namespace Belly
+      isolate_namespace Pepsi
 
-      engine_name :belly
+      engine_name :pepsi
 
       config.after_initialize do
         Backstage.register_storefront(engine_name)
