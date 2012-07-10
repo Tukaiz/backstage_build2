@@ -30,6 +30,7 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'simplecov', require: false
+  gem 'spork'
 end
 
 group :development, :test do
