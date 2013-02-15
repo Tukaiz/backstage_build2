@@ -1,1 +1,3 @@
-Backstage::Application.routes.draw { mount Backstage::Core::Engine, at: '/' }
+Backstage::Application.routes.draw do
+  mount Backstage::Core::Engine, at: '/'
+end

@@ -1,6 +1,8 @@
 module Backstage
   module Pepsi
     class Engine < Rails::Engine
+      include Backstage::Engine
+
       isolate_namespace Pepsi
 
       engine_name :pepsi

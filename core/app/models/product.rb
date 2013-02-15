@@ -1,5 +1,5 @@
-class Product < Backstage::Core::BaseModel
-  attr_accessible :title, :description
+class Product < ActiveRecord::Base
+  include Backstage::Core::Product::Base
 
-  validates :title, presence: true, uniqueness: true
+
 end

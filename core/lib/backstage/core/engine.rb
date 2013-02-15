@@ -21,7 +21,13 @@ module Backstage
 
       config.to_prepare &method(:include_backstage_core!).to_proc
 
-      config.after_initialize { |app| app.reload_routes! }
+      config.after_initialize do |app|
+        app.reload_routes!
+
+        Backstage.storefronts.each do |storefront|
+
+        end
+      end
     end
   end
 end

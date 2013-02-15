@@ -1,6 +1,7 @@
 module Backstage
   autoload :StorefrontRouter,      'backstage/storefront_router'
   autoload :ApplicationController, 'backstage/application_controller'
+  autoload :Engine,                'backstage/engine'
 
   class << self
     @@storefronts = []
