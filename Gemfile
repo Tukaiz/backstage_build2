@@ -2,10 +2,6 @@ source :rubygems
 
 gem 'rails', '~> 3.2'
 
-gem 'rake'
-gem 'haml-rails'
-gem 'sqlite3'
-
 gem 'backstage-core', path: 'core'
 
 group :assets do
@@ -13,28 +9,44 @@ group :assets do
   gem 'coffee-rails', '~> 3.2'
   gem 'uglifier'
   gem 'execjs'
+  gem 'turbo-sprockets-rails3'
 end
 
+gem 'haml-rails'
 gem 'jquery-rails'
-gem 'pry-rails'
+
+gem 'sqlite3'
 
 gem 'responders'
+gem 'simple_form'
+gem 'draper'
+gem 'decorates_before_rendering'
+gem 'multi_fetch_fragments'
+
+gem 'pry-rails'
 
 group :development do
+  gem 'thin'
+  gem 'quiet_assets'
   gem 'pry-doc'
   gem 'newrelic_rpm'
   gem 'ruby-prof'
+  gem 'bullet'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
 end
 
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'shoulda-matchers'
   gem 'simplecov', require: false
-  gem 'spork'
 end
 
 group :development, :test do
-  gem 'ffaker'
-  gem 'fabrication'
   gem 'rspec-rails'
+  gem 'fabrication'
+  gem 'ffaker'
+  gem 'spork-rails'
 end

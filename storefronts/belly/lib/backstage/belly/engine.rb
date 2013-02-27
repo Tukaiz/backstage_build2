@@ -3,7 +3,7 @@ module Backstage
     class Engine < Rails::Engine
       include Backstage::Engine
 
-      # isolate_namespace Belly
+      isolate_namespace Backstage
 
       engine_name :belly
 
