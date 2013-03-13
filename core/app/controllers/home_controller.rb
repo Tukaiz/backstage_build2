@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
   def index
-    render text: 'Main'
+    render text: 'Core Home Controller index'
   end
 end
