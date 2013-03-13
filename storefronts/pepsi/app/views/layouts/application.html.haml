@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{charset: 'UTF-8'}
+    %title Backstage
+    = stylesheet_link_tag 'application'
+    = yield(:stylesheets)
+    /[if lt IE 9]
+      = javascript_include_tag '//html5shiv.googlecode.com/svn/trunk/html5.js'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body{class: page_class}
+    .container-fluid
+      #content.row-fluid
+        %h1 This the Pepsi Layout
+        %h2= yield(:body_content_title)
+        = yield(:body)
+        = yield(:side_body)
+      %footer
+        %p © TKML 2012

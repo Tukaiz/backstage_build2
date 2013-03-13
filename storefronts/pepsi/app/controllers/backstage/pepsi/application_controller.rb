@@ -1,2 +1,3 @@
-class Backstage::Pepsi::ApplicationController < ApplicationController
+class Backstage::Pepsi::ApplicationController < Backstage::Pepsi::ApplicationController
+  layout 'pepsi/application'
 end
