@@ -1,4 +1,4 @@
-class Belly::CoolController < ApplicationController
+class Belly::CoolController < Belly::ApplicationController
 
   def index
     render text: 'Belly is cool because it has this cool controller instead of home!'

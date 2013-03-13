@@ -1,4 +1,4 @@
-class Backstage::Pepsi::PepsiController < ApplicationController
+class Backstage::Pepsi::PepsiController <  Backstage::Pepsi::ApplicationController
 
   def index
     render text: 'This is a pepsi specific products page!'
