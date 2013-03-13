@@ -1,5 +1,5 @@
 Backstage::Core::Engine.register_routes(:pepsi) do
-  root to: 'pepsi#index'
-
-  match '/products' => 'pepsi#index'
+  #match '/products' => 'pepsi#index'
+  resources :products, only: [:index, :show]
 end
+
