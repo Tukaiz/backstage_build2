@@ -1,2 +1,2 @@
-class Belly::ApplicationController < ApplicationController
+class Backstage::Belly::ApplicationController < ApplicationController
 end
