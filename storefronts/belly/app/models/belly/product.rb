@@ -5,4 +5,5 @@ class Belly::Product < ActiveRecord::Base
     puts "old value #{super}"
     42
   end
+
 end
