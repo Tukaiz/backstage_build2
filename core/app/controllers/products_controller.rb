@@ -9,11 +9,11 @@ class ProductsController < ApplicationController
 
   def show
     @product = @products.find(params[:id])
+
     respond_with(@product)
   end
 
   protected
-
   def find_all_products
     @products = Product.order('title DESC')
   end
