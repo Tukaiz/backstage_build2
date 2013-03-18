@@ -35,4 +35,9 @@ Backstage::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  initializer :log_autoload, after: :initialize_logger do
+    ActiveSupport::Dependencies.logger = Rails.logger
+    ActiveSupport::Dependencies.log_activity = true
+  end
 end
