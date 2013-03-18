@@ -1,7 +1,6 @@
 module Backstage
   module Core
     class Engine < ::Rails::Engine
-      isolate_namespace Backstage
       engine_name :backstage
 
       def register_routes(storefront, &block)

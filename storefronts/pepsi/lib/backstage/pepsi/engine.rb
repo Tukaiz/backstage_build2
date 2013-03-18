@@ -3,9 +3,9 @@ module Backstage
     class Engine < Rails::Engine
       include Backstage::Engine
 
-      isolate_namespace Pepsi
-
       engine_name :pepsi
+
+      config.root = Pepsi.root
 
       config.after_initialize do
         Backstage.register_storefront(engine_name)
