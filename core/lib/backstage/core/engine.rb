@@ -1,6 +1,12 @@
+require 'active_support/dependencies'
+
 module Backstage
   module Core
     class Engine < ::Rails::Engine
+      include Backstage::Engine
+
+      config.root = Core.root
+
       engine_name :backstage
 
       def register_routes(storefront, &block)
@@ -12,7 +18,7 @@ module Backstage
       end
 
       def self.include_backstage_core!
-        ::ApplicationController.send(:include, Backstage::ApplicationController)
+        ::ApplicationController.send(:include, Backstage::Core::Controllers::ApplicationController)
         ::ApplicationController.send(:helper,  Backstage::Core::Engine.helpers)
       end
 
@@ -22,6 +28,7 @@ module Backstage
 
       config.after_initialize do |app|
         app.reload_routes!
+        app.eager_load!
 
         Backstage.storefronts.each do |storefront|
 
