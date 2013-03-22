@@ -1,5 +1,5 @@
 class Belly::Product < ActiveRecord::Base
-  include Backstage::Core::Product::Base
+  include Backstage::Core::Models::Product::Base
 
   def price
     puts "old value #{super}"

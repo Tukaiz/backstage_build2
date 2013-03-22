@@ -1,4 +1,4 @@
-module Backstage::Core::Product::Base
+module Backstage::Core::Models::Product::Base
   extend ActiveSupport::Concern
   include Pricing
 
