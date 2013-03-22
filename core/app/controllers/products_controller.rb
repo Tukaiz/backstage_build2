@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   respond_to :html
 
-  before_filter :find_all_products
+  before_filter :find_all_products, except: [:create, :destroy, :update]
 
   def index
     respond_with(@products)
