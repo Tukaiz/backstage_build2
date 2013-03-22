@@ -11,8 +11,6 @@ module Backstage
         end
       end
 
-
-
       def self.include_backstage_core!
         ::ApplicationController.send(:include, Backstage::ApplicationController)
         ::ApplicationController.send(:helper,  Backstage::Core::Engine.helpers)

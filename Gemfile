@@ -1,36 +1,48 @@
-source :rubygems
+source 'https://rubygems.org'
 
-gem 'rails', '~> 3.2'
+gem 'actionpack',   '~> 3.2'
+gem 'activerecord', '~> 3.2'
+gem 'actionmailer', '~> 3.2'
+gem 'bundler'
 
 gem 'backstage-core', path: 'core'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2'
-  gem 'coffee-rails', '~> 3.2'
+  gem 'sass-rails',     '~> 3.2'
+  gem 'bootstrap-sass', '~> 2.3.0.1'
   gem 'uglifier'
+  gem 'haml_coffee_assets'
   gem 'execjs'
   gem 'turbo-sprockets-rails3'
 end
 
+gem 'coffee-rails',   '~> 3.2'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jquery-turbolinks', github: 'kossnocorp/jquery.turbolinks'
 
-gem 'sqlite3'
+gem 'pg'
+gem 'squeel'
 
 gem 'responders'
 gem 'simple_form'
-gem 'draper'
-gem 'decorates_before_rendering'
 gem 'multi_fetch_fragments'
 
 gem 'pry-rails'
 
 group :development do
   gem 'thin'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'rb-fsevent', require: false # OSX
+  # gem 'rb-inotify', require: false # Linux
+  # gem 'rb-fchange', require: false # Windows
+  gem 'ruby_gntp'
+  gem 'launchy'
   gem 'quiet_assets'
-  gem 'pry-doc'
   gem 'newrelic_rpm'
-  gem 'ruby-prof'
   gem 'bullet'
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -42,11 +54,12 @@ group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
+  gem 'poltergeist'
 end
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'fabrication'
   gem 'ffaker'
-  gem 'spork-rails'
+  gem 'spork-rails', github: 'gmanley/spork-rails', branch: 'gemspec-tweak'
 end
