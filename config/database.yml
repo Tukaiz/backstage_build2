@@ -1,18 +1,19 @@
-defaults: &defaults
+development:
   adapter: postgresql
-  database: backstage2_<%= Rails.env %>
+  database: backstage2_development
 
 test:
-  <<: *defaults
-
-development:
-  <<: *defaults
+  adapter: postgresql
+  database: backstage2_test
 
 wip:
-  <<: *defaults
+  adapter: postgresql
+  database: backstage2_wip
 
 staging:
-  <<: *defaults
+  adapter: postgresql
+  database: backstage2_staging
 
 production:
-  <<: *defaults
+  adapter: postgresql
+  database: backstage2_production

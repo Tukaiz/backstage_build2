@@ -32,6 +32,14 @@ Spork.prefork do
         DatabaseCleaner.start
       end
     end
+
+    config.before(:each, type: :helper) { init_haml_helpers }
+
+    config.after(:each) do |group|
+      unless group.example.metadata[:no_database_cleaner]
+        DatabaseCleaner.clean
+      end
+    end
   end
 end
 
