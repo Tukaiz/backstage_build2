@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'actionpack',   '~> 3.2'
-gem 'activerecord', '~> 3.2'
-gem 'actionmailer', '~> 3.2'
+gem 'rails', '~> 3.2'
 gem 'bundler'
 
 gem 'backstage-core', path: 'core'
