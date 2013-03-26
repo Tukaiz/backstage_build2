@@ -48,4 +48,16 @@ describe Backstage, no_database_cleaner: true do
       end
     end
   end
+
+
+  describe '#register_assets' do
+    before(:each) { Backstage.storefronts.clear }
+
+    it "should add mainifests to the rails config for production precompile" do
+      Backstage.register_storefront(Backstage::CoolStorefront)
+      expect(Rails.application.config.assets.precompile).to include("application_Backstage::CoolStorefront.css")
+    end
+
+  end
+
 end
