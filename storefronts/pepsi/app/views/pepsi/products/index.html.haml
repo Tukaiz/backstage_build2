@@ -1,6 +1,65 @@
 - content_for :body do
-  %h1 Pepsi
-  %ul#products
-    - @products.each do |product|
-      %li= link_to product.title, backstage.product_path(product)
+  / %h1 Belly
+  / %button{type: "button", class: "btn btn-primary"} Primary
+  / %button{type: "button", class: "btn"} Second
+  / %ul#products
+  /   - @products.each do |product|
+  /     %li= link_to product.title, backstage.product_path(product)
+  .container-fluid
+    .row-fluid
+      .span3
+        .well.sidebar-nav
+          %ul.nav.nav-list
+            %li.nav-header Sidebar
+            %li.active
+              %a{:href => "#"} Link
+            %li
+              %a{:href => "#"} Link
+            %li
+              %a{:href => "#"} Link
+            %li
+              %a{:href => "#"} Link
+            %li.nav-header Sidebar
+            %li
+              %a{:href => "#"} Link
+            %li
+              %a{:href => "#"} Link
+            %li
+              %a{:href => "#"} Link
+            %li
+              %a{:href => "#"} Link
+            %li
+              %a{:href => "#"} Link
+            %li
+              %a{:href => "#"} Link
+            %li.nav-header Sidebar
+            %li
+              %a{:href => "#"} Link
+            %li
+              %a{:href => "#"} Link
+            %li
+              %a{:href => "#"} Link
+        / /.well
+      / /span
+      .span9
+        .hero-unit
+          %h1 Hello, Pepsi!
+          %p
+            This is a template for a simple
+            %a#_GPLITA_2{:href => "#", :in_rurl => "http://i.trkjmp.com/click?v=VVM6MzUxNTU6NDptYXJrZXRpbmc6N2I3MmUxOTgxOWY5NDRmOGY0ZTMwNzViOTExNjc3ZDk6ei0xMTIyLTExNTExNTp0d2l0dGVyLmdpdGh1Yi5jb206Mzc2OTI6YWMwNmFjNDdmN2I4NDY4MTZhMDMyMWEyZDg2NTllYjI", :style => "text-decoration:underline", :title => "Click to Continue > by CouponDropDown"} marketing
+            or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+          %p
+            %a.btn.btn-primary.btn-large{:href => "#"} Learn more »
+        .row-fluid
+          - @products.each do |product|
+            .span4
+              %h2= link_to product.title, backstage.product_path(product)
+              %p= product.description
+              %p
+                = link_to 'View details »', backstage.product_path(product)
+
+    %hr/
+    %footer
+      %p © Company 2013
+
 

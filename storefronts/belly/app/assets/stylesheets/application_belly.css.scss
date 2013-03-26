@@ -1,0 +1,19 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_directory ./belly
+ *
+ **** look at variables.scss to find the variables that you can change to
+      create a new bootstrap theme
+ **** https://github.com/thomas-mcdonald/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss
+*/
+
+$linkColor:                         #f14814 !default;
+$textColor:                         #010101 !default;
+$btnBackground:                     #918d8b !default;
+$btnBackgroundHighlight:            darken(#918d8b, 10%) !default;
+$heroUnitHeadingColor:              $linkColor !default;
+
+@import "bootstrap";
