@@ -9,7 +9,6 @@ module Backstage
 
       config.after_initialize do
         Backstage.register_storefront(engine_name)
-        Rails.application.config.assets.precompile += ["application_#{engine_name}.css"]
       end
     end
   end

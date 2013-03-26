@@ -14,8 +14,13 @@ module Backstage
     # Register a Backstage storefront
     def register_storefront(storefront)
       return if storefront_registered?(storefront)
+      register_assets(storefront)
 
       @@storefronts << storefront
+    end
+
+    def register_assets(storefront)
+      Rails.application.config.assets.precompile += ["application_#{storefront}.css"]
     end
 
     # Returns true if a storefront is currently registered with Backstage
