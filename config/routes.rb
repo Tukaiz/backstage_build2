@@ -1,3 +1,3 @@
 Backstage::Application.routes.draw do
-  mount Backstage::Core::Engine, at: '/'
+  # noop
 end
