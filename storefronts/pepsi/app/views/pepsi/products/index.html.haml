@@ -53,10 +53,10 @@
         .row-fluid
           - @products.each do |product|
             .span4
-              %h2= link_to product.title, backstage.product_path(product)
+              %h2= link_to product.title, product_path(product)
               %p= product.description
               %p
-                = link_to 'View details »', backstage.product_path(product)
+                = link_to 'View details »', product_path(product)
 
     %hr/
     %footer
