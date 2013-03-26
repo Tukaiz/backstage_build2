@@ -15,7 +15,6 @@ module Backstage
             constraints(StorefrontRouter.new(storefront), &block.bind(self))
           end
         end
-        # Rails.application.reload_routes!
       end
 
       def self.include_backstage_core!
@@ -28,6 +27,8 @@ module Backstage
       config.to_prepare &method(:include_backstage_core!).to_proc
 
       config.after_initialize do |app|
+        Rails.application.reload_routes!
+
         app.eager_load!
 
         Backstage.storefronts.each do |storefront|
