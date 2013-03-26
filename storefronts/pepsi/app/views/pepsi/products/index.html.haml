@@ -1,0 +1,6 @@
+- content_for :body do
+  %h1 Pepsi
+  %ul#products
+    - @products.each do |product|
+      %li= link_to product.title, backstage.product_path(product)
+

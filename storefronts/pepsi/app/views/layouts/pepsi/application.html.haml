@@ -3,7 +3,7 @@
   %head
     %meta{charset: 'UTF-8'}
     %title Backstage
-    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'application_pepsi'
     = yield(:stylesheets)
     /[if lt IE 9]
       = javascript_include_tag '//html5shiv.googlecode.com/svn/trunk/html5.js'
@@ -12,7 +12,7 @@
   %body{class: page_class}
     .container-fluid
       #content.row-fluid
-        %h1 This the Pepsi Layout
+        %h1 This the Pepsi Layout 2
         %h2= yield(:body_content_title)
         = yield(:body)
         = yield(:side_body)
