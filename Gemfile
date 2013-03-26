@@ -31,13 +31,6 @@ gem 'pry-rails'
 
 group :development do
   gem 'thin'
-  gem 'guard'
-  gem 'guard-rspec'
-  gem 'guard-spork'
-  gem 'rb-fsevent', require: false # OSX
-  # gem 'rb-inotify', require: false # Linux
-  # gem 'rb-fchange', require: false # Windows
-  gem 'ruby_gntp'
   gem 'launchy'
   gem 'quiet_assets'
   gem 'newrelic_rpm'

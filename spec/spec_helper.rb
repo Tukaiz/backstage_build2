@@ -12,11 +12,16 @@ Spork.prefork do
   require 'rspec/rails'
   require 'shoulda/matchers/integrations/rspec'
 
+
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+  Dir[Rails.root.join("**/spec_helper.rb")].each {|f| require f}
 
   RSpec.configure do |config|
     config.mock_with   :rspec
     config.expect_with(:rspec) {|c| c.syntax = :expect }
+
+    # config.extend  ControllerMacros,    type: :controller
+    config.include Haml::Helpers,       type: :helper
 
     config.alias_it_should_behave_like_to :it_has_behavior, 'has behavior:'
 
