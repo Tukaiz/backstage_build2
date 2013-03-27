@@ -1,0 +1,2 @@
+Fabricator(:products) do
+end
