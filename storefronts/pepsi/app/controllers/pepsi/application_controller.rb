@@ -1,3 +1,5 @@
-class Pepsi::ApplicationController < ApplicationController
-  layout 'pepsi/application'
+module Pepsi
+  class ApplicationController < ApplicationController
+    layout 'pepsi/application'
+  end
 end
