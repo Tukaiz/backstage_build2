@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 3.2'
+gem 'rails', '~> 4.0.0.beta1'
 gem 'bundler'
 
 gem 'backstage-core', path: 'core'
 
 group :assets do
-  gem 'sass-rails',     '~> 3.2'
+  gem 'sass-rails', github: 'rails/sass-rails'
   gem 'bootstrap-sass', '~> 2.3.0.1'
   gem 'uglifier'
   gem 'haml_coffee_assets'
@@ -14,17 +14,15 @@ group :assets do
   gem 'turbo-sprockets-rails3'
 end
 
-gem 'coffee-rails',   '~> 3.2'
+gem 'coffee-rails', github: 'rails/coffee-rails'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jquery-turbolinks', github: 'kossnocorp/jquery.turbolinks'
 
 gem 'pg'
-gem 'squeel'
 
 gem 'responders'
-gem 'simple_form'
 gem 'multi_fetch_fragments'
 
 gem 'pry-rails'
@@ -42,7 +40,7 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'database_cleaner'
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
   gem 'poltergeist'
@@ -52,5 +50,4 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'fabrication'
   gem 'ffaker'
-  gem 'spork-rails', github: 'gmanley/spork-rails', branch: 'gemspec-tweak'
 end
