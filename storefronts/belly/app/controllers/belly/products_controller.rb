@@ -16,7 +16,7 @@ class Belly::ProductsController < Belly::ApplicationController
   protected
 
   def find_all_products
-    @products = Belly::Product.order('title DESC')
+    @products = Product.order('title DESC')
   end
 
 end

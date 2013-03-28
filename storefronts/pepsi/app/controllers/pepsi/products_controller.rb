@@ -10,6 +10,6 @@ class Pepsi::ProductsController < Pepsi::ApplicationController
   private
 
   def find_all_products
-    @products = Pepsi::Product.order('title DESC')
+    @products = Product.order('title DESC')
   end
 end
