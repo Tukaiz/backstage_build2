@@ -22,19 +22,20 @@ describe ProductsController do
   end
 
   describe 'GET CORE #show' do
+    pending do
+      let(:product) { Product.new }
 
-    let(:product) { Product.new }
+      before do
+        Product.stub(:find).and_return(product)
+        get(:show)
+      end
 
-    before do
-      Product.stub(:find).and_return(product)
-      get(:show)
-    end
+      it { should respond_with(:success) }
+      it { should render_template(:show) }
 
-    it { should respond_with(:success) }
-    it { should render_template(:show) }
-
-    it 'should assign @product' do
-      expect(assigns[:product]).to be_present
+      it 'should assign @product' do
+        expect(assigns[:product]).to be_present
+      end
     end
   end
 end
