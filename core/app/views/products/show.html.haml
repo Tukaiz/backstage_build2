@@ -14,4 +14,5 @@
     %h2= t('.other')
     %ul#products
       - @products.each do |product|
+
         %li= link_to product.title, product
