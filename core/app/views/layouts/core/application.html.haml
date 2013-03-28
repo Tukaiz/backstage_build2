@@ -12,9 +12,14 @@
   %body{class: page_class}
     .container-fluid
       #content.row-fluid
-        %h1 This is the Core Layout
-        %h2= yield(:body_content_title)
-        = yield(:body)
-        = yield(:side_body)
-      %footer
-        %p © TKML 2012
+
+        = render 'sessions/current_user'
+
+    %h2= yield(:body_content_title)
+    = yield(:body)
+    = yield(:side_body)
+
+  %footer
+    .container-fluid
+      #content.row-fluid
+        %p © TKML 2013

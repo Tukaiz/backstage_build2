@@ -4,7 +4,10 @@
       .span3
         .well.sidebar-nav
           %ul.nav.nav-list
-            %li.nav-header Sidebar
+            %li.nav-header Categories
+            - @categories.each do |category|
+              %li= link_to category.title, category_path(category)
+
             %li.active
               %a{:href => "#"} Link
             %li

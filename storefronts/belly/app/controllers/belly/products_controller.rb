@@ -4,6 +4,7 @@ class Belly::ProductsController < Belly::ApplicationController
   before_filter :find_all_products
 
   def index
+    @categories = Belly::Category.all
     respond_with(@products)
   end
 

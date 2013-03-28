@@ -1,0 +1,4 @@
+- content_for :body do
+  %ul.unstyled
+    -Backstage.storefronts.each do |sf|
+      %li= link_to sf, sessions_path(storefront: sf), method: :post
