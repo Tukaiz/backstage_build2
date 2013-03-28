@@ -1,6 +1,6 @@
 module Backstage
   module Core
-    module Middleware
+    module Helpers
 
       module RequireUser
         extend ActiveSupport::Concern

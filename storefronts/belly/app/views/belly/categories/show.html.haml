@@ -2,3 +2,7 @@
   .container-fluid
     .row-fluid
       =@category.title
+  .container-fluid
+    .row-fluid
+      -@category.products.each do |product|
+        =link_to product.title, product_path(product)
