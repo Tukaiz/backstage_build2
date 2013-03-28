@@ -3,6 +3,7 @@ class Belly::ProductsController < Belly::ApplicationController
 
   before_filter :find_all_products
 
+
   def index
     respond_with(@products)
   end
