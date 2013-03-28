@@ -3,6 +3,7 @@ class Belly::ProductsController < Belly::ApplicationController
 
   before_filter :find_all_products
 
+
   def index
     respond_with(@products)
   end
@@ -15,7 +16,7 @@ class Belly::ProductsController < Belly::ApplicationController
   protected
 
   def find_all_products
-    @products = Belly::Product.order('title DESC')
+    @products = Product.order('title DESC')
   end
 
 end
