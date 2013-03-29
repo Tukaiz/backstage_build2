@@ -9,43 +9,41 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130329142407) do
+ActiveRecord::Schema.define(version: 20130329142407) do
 
-  create_table "belly_notes", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
-  create_table "categories", :force => true do |t|
+  create_table "categories", force: true do |t|
     t.string   "title"
     t.string   "description"
     t.boolean  "active"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  create_table "product_categories", :force => true do |t|
+  create_table "product_categories", force: true do |t|
     t.integer  "category_id"
     t.integer  "product_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  create_table "products", :force => true do |t|
+  create_table "products", force: true do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "storefront_id"
   end
 
-  create_table "storefronts", :force => true do |t|
+  create_table "storefronts", force: true do |t|
     t.string   "name"
     t.string   "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

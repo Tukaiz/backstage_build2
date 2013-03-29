@@ -7,6 +7,10 @@ class Pepsi::ProductsController < Pepsi::ApplicationController
     respond_with(@products)
   end
 
+  def show
+    @product = @products.find(params[:id])
+    respond_with(@product)
+  end
 
 
   private
