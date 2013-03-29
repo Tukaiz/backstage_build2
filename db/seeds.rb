@@ -9,3 +9,14 @@ storefronts.each do |storefront|
                               title: Faker::Product.product_name,
                               description: Faker::Lorem.paragraph) }
 end
+
+Belly::Category.create(
+  title: '1 ' + Faker::Product.brand,
+  description: Faker::Lorem.sentence(7),
+  active: true
+)
+Belly::Category.create(
+  title: '2 ' + Faker::Product.brand,
+  description: Faker::Lorem.sentence(7),
+  active: false
+)

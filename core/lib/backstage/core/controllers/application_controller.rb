@@ -11,4 +11,10 @@ module Backstage::Core::Controllers::ApplicationController
   # def shared_method
   #   do shared stuff
   # end
+
+  def render(*args)
+    options = args.extract_options!
+    options[:template] = "/#{controller_name}/#{params[:action]}"
+    super(*(args << options))
+  end
 end

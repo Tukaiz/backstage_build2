@@ -19,4 +19,5 @@ class Belly::ProductsController < Belly::ApplicationController
     @products = Belly::Product.order('title DESC')
   end
 
+
 end

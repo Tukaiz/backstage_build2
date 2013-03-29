@@ -4,7 +4,7 @@ describe 'Storefront routing' do
     @storefront = mock_storefront!(:foo)
   end
 
-  describe 'Routing based on storefront parameter' do
+  describe 'based on storefront parameter' do
     before do
       Backstage::Core::Engine.register_routes(:foo) do
         resources :products

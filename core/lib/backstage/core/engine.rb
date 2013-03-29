@@ -12,7 +12,7 @@ module Backstage
       def register_routes(storefront, &block)
         Rails.application.routes.prepend do
           scope module: storefront do
-            constraints(StorefrontRouter.new(storefront), &block.bind(self))
+            constraints(StorefrontRouter.new(storefront), &proc { instance_exec(&block) })
           end
         end
       end

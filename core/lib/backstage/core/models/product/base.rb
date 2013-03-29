@@ -3,6 +3,6 @@ module Backstage::Core::Models::Product::Base
   include Pricing
 
   included do
-    attr_accessible :title, :description
+    # noop
   end
 end
