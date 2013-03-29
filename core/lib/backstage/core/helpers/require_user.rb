@@ -10,10 +10,7 @@ module Backstage
         end
 
         def require_storefront
-          unless current_storefront
-            redirect_to new_session_path
-            return false
-          end
+          redirect_to new_session_path unless current_storefront
         end
 
         def current_storefront
