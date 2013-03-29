@@ -5,6 +5,6 @@ class Backstage::StorefrontRouter
   end
 
   def matches?(request)
-    (request.session[:storefront] || request.subdomain) == @storefront.to_s
+    (request.session[:storefront] || request.params[:storefront] || request.subdomain) == @storefront.to_s
   end
 end
