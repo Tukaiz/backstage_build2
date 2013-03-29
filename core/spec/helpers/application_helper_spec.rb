@@ -2,8 +2,13 @@ require File.expand_path('../../spec_helper', __FILE__)
 
 describe Backstage::Core::Helpers::ApplicationHelper do
 
-  describe 'login_for' do
+  describe 'core_helper' do
+    it 'should display ' do
+      expect(core_helper).to eq 'This is a CORE application helper'
+    end
+  end
 
+  describe 'login_for' do
     context 'When not Logged in' do
       it 'display Login' do
         expect( login_for nil ).to have_link('Login')
