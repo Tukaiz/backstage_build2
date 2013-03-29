@@ -1,8 +1,6 @@
 class ProductsController < ApplicationController
   respond_to :html
 
-  before_filter :require_storefront
-
   before_filter :find_all_products, except: [:create, :destroy, :update]
 
   def index
@@ -15,7 +13,6 @@ class ProductsController < ApplicationController
   end
 
   protected
-
   def find_all_products
     @products = Product.order('title DESC')
   end

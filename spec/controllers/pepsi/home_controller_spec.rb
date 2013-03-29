@@ -15,7 +15,7 @@ describe Pepsi::ProductsController do
     it { expect(response).to render_template(:index) }
 
     it 'should assign @products' do
-      expect(assigns[:products]).to be_present
+        expect(assigns[:products]).to be_present
     end
   end
 
