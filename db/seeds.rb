@@ -1,14 +1,11 @@
-Product.create(
-  title: 'Dog',
-  description: 'Golden Retriever'
-)
+Storefront.delete_all
+Product.delete_all
 
-Product.create(
-  title: 'Cat',
-  description: 'Siamese'
-)
+storefronts = [ Storefront.create(name: 'Belly'),
+                Storefront.create(name: 'Pepsi')]
 
-Product.create(
-  title: 'Mouse',
-  description: 'Albino'
-)
+storefronts.each do |storefront|
+  5.times { storefront.products.create(
+                              title: Faker::Product.product_name,
+                              description: Faker::Lorem.paragraph) }
+end
