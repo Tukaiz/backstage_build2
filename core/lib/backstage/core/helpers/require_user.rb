@@ -17,10 +17,6 @@ module Backstage
           session[:storefront]
         end
 
-        def store_location
-          session[:return_to] = request.url
-        end
-
       end
 
     end
