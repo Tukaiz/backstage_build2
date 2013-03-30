@@ -1,5 +1,5 @@
 require 'spec_helper'
-require APP_ROOT.join('storefronts/pepsi/app/models/pepsi/product')
+require STOREFRONTS_ROOT.join('pepsi/app/models/pepsi/product')
 
 describe Pepsi::Product do
 

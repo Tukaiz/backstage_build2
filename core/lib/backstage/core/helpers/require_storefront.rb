@@ -2,19 +2,15 @@ module Backstage
   module Core
     module Helpers
 
-      module RequireUser
+      module RequireStorefront
         extend ActiveSupport::Concern
 
         included do
-          helper_method :current_storefront
+          before_filter :require_storefront
         end
 
         def require_storefront
           redirect_to new_session_path unless current_storefront
-        end
-
-        def current_storefront
-          session[:storefront]
         end
 
       end

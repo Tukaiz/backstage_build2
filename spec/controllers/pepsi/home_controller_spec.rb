@@ -1,4 +1,4 @@
-require APP_ROOT.join('storefronts/pepsi/app/controllers/pepsi/products_controller')
+require STOREFRONTS_ROOT.join('pepsi/app/controllers/pepsi/products_controller')
 
 describe Pepsi::ProductsController do
 

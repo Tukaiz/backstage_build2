@@ -1,5 +1,5 @@
 require 'spec_helper'
-require APP_ROOT.join('storefronts/belly/lib/backstage/belly')
+require STOREFRONTS_ROOT.join('belly/lib/backstage/belly')
 
 describe Belly::ProductsHelper do
   describe "#core_helper" do
