@@ -1,2 +1,2 @@
 require 'backstage/core'
-Dir[APP_ROOT.join('storefronts/*/lib/backstage-*.rb')].each {|f| require f }
+Dir[STOREFRONTS_ROOT.join('*/lib/backstage-*.rb')].each {|f| require f }
