@@ -1,18 +1,22 @@
-require STOREFRONTS_ROOT.join('pepsi/app/controllers/pepsi/products_controller')
+require STOREFRONTS_ROOT.join('belly/app/controllers/belly/products_controller')
 
-describe Pepsi::ProductsController do
+describe Belly::ProductsController do
 
-  describe 'PEPSI GET #index' do
+  before do
+    controller.stub(:current_storefront).and_return('belly')
+  end
+
+  describe 'Belly GET #index' do
 
     let(:products) { mock_models(Product, 3) }
 
     before do
-      Pepsi::Product.stub(:order).and_return(products)
-      get :index, storefront: 'pepsi'
+      Belly::Product.stub(:order).and_return(products)
+      get :index
     end
 
     it { expect(response).to be_success }
-    it { expect(response).to render_template("layouts/pepsi/application") }
+    it { expect(response).to render_template("layouts/belly/application") }
     it { expect(response).to render_template(:index) }
 
     it 'should assign @products' do
@@ -20,15 +24,16 @@ describe Pepsi::ProductsController do
     end
   end
 
-  describe 'PEPSI GET #show' do
+  describe 'Belly GET #show' do
     let(:product) { Product.create() }
 
     before do
-      get :show, storefront: 'pepsi', id: product.id
+      get :show, id: product.id
       Product.stub(:find).and_return(product)
     end
 
     it { expect(response).to be_success }
+    it { expect(response).to render_template("layouts/belly/application") }
     it { expect(response).to render_template(:show) }
 
     it 'should assign @product' do

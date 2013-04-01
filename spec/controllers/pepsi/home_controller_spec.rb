@@ -12,6 +12,7 @@ describe Pepsi::ProductsController do
     end
 
     it { expect(response).to be_success }
+    it { expect(response).to render_template("layouts/pepsi/application") }
     it { expect(response).to render_template(:index) }
 
     it 'should assign @products' do
