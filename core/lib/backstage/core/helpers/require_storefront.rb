@@ -6,7 +6,7 @@ module Backstage
         extend ActiveSupport::Concern
 
         included do
-          before_filter :require_storefront
+          #before_filter :require_storefront
         end
 
         def require_storefront
