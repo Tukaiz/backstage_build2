@@ -2,4 +2,4 @@
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
 require 'bundler/setup'
 APP_ROOT = Pathname(File.expand_path('../..', __FILE__))
-STOREFRONTS_ROOT = Pathname(File.expand_path('../../Applications/', __FILE__))
+STOREFRONTS_ROOT = Pathname(File.expand_path('../../applications/', __FILE__))
