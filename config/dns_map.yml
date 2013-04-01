@@ -1,0 +1,15 @@
+development:
+  local.belly.com:
+    'belly'
+  local.redbox.com:
+    'redbox'
+  local.pepsi.com:
+    'pepsi'
+
+staging:
+  staging.belly.com:
+    'belly'
+  staging.pepsi.com:
+    'pepsi'
+  staging.redbox.com:
+    'redbox'
