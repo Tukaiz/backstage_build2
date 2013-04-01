@@ -3,7 +3,7 @@
 
 - content_for :body do
   %section
-    %h1 Pepsi
+    %h1 Belly
   %section
     %h1= t('.title')
     %p= @product.title
@@ -17,4 +17,4 @@
     %ul#products
       - @products.each do |product|
 
-        %li= link_to product.title, product
+        %li= link_to product.title, product_path(product)

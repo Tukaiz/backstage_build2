@@ -1,6 +1,7 @@
 class Belly::ProductsController < Belly::ApplicationController
   respond_to :html
 
+  before_filter :require_storefront
   before_filter :find_all_products
 
   def index

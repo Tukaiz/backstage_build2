@@ -1,5 +1,6 @@
 class Belly::CategoriesController < Belly::ApplicationController
-
+  before_filter :require_storefront
+  
   def index
     @categories = Belly::Category.all
   end

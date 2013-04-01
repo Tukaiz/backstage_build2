@@ -1,5 +1,6 @@
 module Pepsi
-  class ApplicationController < ApplicationController
+  class ApplicationController < ActionController::Base
+  	include Backstage::Core::Helpers::CurrentStorefront
     layout 'pepsi/application'
 
   end
